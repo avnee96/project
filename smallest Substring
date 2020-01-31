@@ -1,0 +1,21 @@
+int countStr(string st, int ch)
+{
+	int n=st.length();
+	 int result=0;
+	 int count[26];
+	 
+	 for(int i=0; i<n;i++)
+	 {
+		int distinct=0;
+		set(count,0,sizeof(count));
+		for(int j=i;j<n;j++)
+		{
+		if(count[st[j] - 'a']==0)
+		distinct++;
+		count[st[j] -'a']++;
+		if( distinct ==ch)
+		result++;
+		}
+	 }
+		return result++;
+}
